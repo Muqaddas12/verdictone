@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ⚖️ VerdictOne — Client Portal
 
-## Getting Started
+A modern legal client portal built with **Next.js 16**, **Tailwind CSS v4**, **Framer Motion**, and **Lucide React**.
 
-First, run the development server:
+Client-facing dashboard for tracking legal cases, accessing documents, communicating with advocates, and staying updated on hearings — all in one place.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## ✨ Features
+
+| Feature | Description |
+|---|---|
+| **Case Dashboard** | Real-time overview of active cases, next hearings, and court details |
+| **Timeline** | Visual progress tracking with color-coded states (completed / in-progress / pending) |
+| **Document Center** | Upload, download, and manage legal documents (PDFs, affidavits, notices) |
+| **Client Queries** | WhatsApp-style chat with your advocate — persistent history |
+| **Notifications** | Hearing reminders, document alerts, and case update notifications |
+| **Quick Actions** | Ask question, upload document, book appointment, call advocate |
+| **Stats Overview** | Active cases, document count, upcoming hearings, resolved queries |
+
+---
+
+## 🎨 Design System
+
+```
+Background  → #f8fafc
+Primary     → #0f172a
+Accent      → #1d4ed8
+Success     → #10b981
+Warning     → #f59e0b
+Danger      → #ef4444
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Typography:** Outfit (headings) + Inter (body)
+- **Corners:** `rounded-xl` (10px) / `rounded-2xl` / `rounded-3xl`
+- **Shadows:** Soft slate shadows (`shadow-lg shadow-slate-100`)
+- **Animations:** Framer Motion staggered fade-ins on dashboard load
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧱 Tech Stack
 
-## Learn More
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 16 (App Router) |
+| Language | JavaScript (JSX) |
+| Styling | Tailwind CSS v4 |
+| Animation | Framer Motion |
+| Icons | Lucide React |
+| Fonts | Outfit + Inter (via next/font) |
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Getting Started
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+# Install dependencies
+npm install
 
-## Deploy on Vercel
+# Start development server
+npm run dev
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Build for production
+npm run build
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Open [http://localhost:3000](http://localhost:3000) to view the landing page.
+
+The client dashboard lives at `/dashboard` — static demo data is already in place.
+
+---
+
+## 📁 Project Structure
+
+```
+app/
+├── globals.css          # Theme variables + base styles
+├── layout.tsx           # Root layout (fonts, metadata)
+├── page.tsx             # Landing page
+└── dashboard/
+    ├── layout.jsx       # Dashboard shell (sidebar + top bar)
+    └── page.jsx         # Client dashboard (all sections)
+```
+
+---
+
+## 🗺️ Roadmap
+
+- [ ] Authentication (OTP / email + password)
+- [ ] MongoDB integration for dynamic data
+- [ ] Admin panel for advocates
+- [ ] Document upload with Cloudinary / S3
+- [ ] Email & SMS notifications (Resend / Twilio)
+- [ ] Hindi + English language toggle
+- [ ] Appointment booking with calendar sync
+- [ ] E-sign integration
+- [ ] Payment invoices
+
+---
+
+## 📄 License
+
+MIT — built for legal tech.
